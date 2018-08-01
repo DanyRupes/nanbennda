@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nanbenda</title>
+    <script src="/jquery.min.js"></script>
+    <link rel="stylesheet" href="/bootstrap.min.css">
+    <script src="bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/style.css">
+    <script src="/angular-min.js"></script>
+    <script type="text/javascript" src="/ng-file-upload.min.js"></script>
+    <script type="text/javascript" src="/ng-file-upload-shim.min.js"></script> 
+</head>
+<body class="container-fluid" ng-app="nanbenda" ng-controller="nbController">
+
+        <div class="headContainer container-fluid">
+            <ul class="hcntContainer">
+                <li class="himgContainer"><img class="headImg" src="/images/RotaryMBS.png"></li>
+                <li class="himgContainer" style="margin-top: 10px;"><img class="headImg" src="/images/UP_TOWN.png"></li>
+                <li class="himgContainer3"><img class="headImg" src="/images/DistrictTheme_CB-EN.png"></li>
+                <li class="himgContainer4"><img class="headImg" src="/images/ihihihiii.png"></li>
+            </ul>
+        </div>
+
+        <div class="bodyContainer">
+            <div class="l_picContainer">
+                <img class="l_pic" src="/images/MINI.png">
+            </div>
+            
+            
+            <div class="main">
+                    <form  class="main">
+                    <div class="titleName">
+                        <img class="title_pic" src="/images/titleName.png">
+                    </div>
+                        <div class="row boxes">
+                        <div class="addBoxLeft col-md-4 col-sm-4">
+                            <input type="text" ng-model="name" class="leftboxpic">
+                            <!-- <img  src="../images/leftbox.png"> -->
+                        </div>
+                        <div class="addGrpBox col-md-4 col-sm-4">
+                            <input class="grouppic"  ngf-select="$group_pic"  ngf-max-size="10MB" accept="image/*" ng-model="group_pic">
+                        </div>
+                        <div class="addBoxRight col-md-4 col-sm-4">
+                            <img  src="/images/rightboxNew2.png">
+                        </div>
+                    </div>
+
+                    <div class="messageContainer">
+                        <input ng-model="message" class="msgpic" type="text" placeholder="Your Message....">
+                    </div>
+                    <div class="speakContainer">
+                            <input  class="speakpic callAudio"  ngf-select="audio" ng-model="audio" accept="audio/*"capture id="recorder">
+ 
+                    </div>
+                    <div class="submitContainer">
+                        <input type="submit" ng-click="submit();">
+                    </div>
+                    </form>
+                </div>
+                <!-- <iframe src="http://localhost:5500/src/bin/audio.html" width="300" height="200" frameborder="0"></iframe> -->
+
+                <!-- <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+                    </fb:login-button> -->
+
+        </div>
+
+
+
+    <!-- <form action="/posting">
+        <input type="file" name="group_pic">
+        <input type="text" name="msg_from">
+        <input type="text" name="msg_to">
+        <textarea type="text" name="message" placeholder="Enter your message"></textarea>
+        <input type="file" name="audio">
+        <input type="submit">
+    </form> -->
+
+    <script src="/index.js"></script>
+</body>
+</html>

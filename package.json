@@ -1,0 +1,16 @@
+{
+  "name": "nanbenda",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "dany",
+  "license": "ISC",
+  "dependencies": {
+    "mediaserver": "^0.1.1",
+    "mongoose": "^5.2.6",
+    "multer": "^1.3.1"
+  }
+}
