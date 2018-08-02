@@ -29,13 +29,14 @@ body .container-fluid {
 }
 
 .overlay_text{
+    text-align: center;
+    width: 50%;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    font-size: 50px;
+    top: 28%;
+    left: 56%;
+    font-size: 41px;
     color: white;
-    transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
+    transform: translate(-55%,-46%);
 }
 
 .hcntContainer {

@@ -15,7 +15,7 @@ app.controller('nbController', function ($scope,Upload,$http) {
     $scope.submit = function () { 
         var audio_,group_pic,pic1,pic2;
 
-        document.querySelector('.overlay').style.display = "block";
+      
             audio_ = $scope.audio; 
             group_pic = $scope.group_pic;        
             pic1 = $scope.pic1; 
@@ -31,6 +31,7 @@ app.controller('nbController', function ($scope,Upload,$http) {
                 alert("Please Include Pictures and Submit")
                 return false
             }
+            document.querySelector('.overlay').style.display = "block";
        Upload.upload({
          url : '/add',
          method : 'POST',

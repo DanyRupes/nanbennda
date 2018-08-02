@@ -29,7 +29,7 @@ var storePropic = multer.diskStorage({
       cb(null, 'uploads/files')
   },
   filename : (req, file, cb) => {
-    console.log(file)
+    // console.log(file)
       cb(null, file.originalname)
   }
 })
@@ -85,7 +85,7 @@ app.post('/add',upload.fields([{
           }
           function startDB(){
             new db.nanben({name : req.body.name,'message' : req.body.message, audio : audio_, group_pic : group_, pic1 : pic1_, pic2 : pic2_}, function (data) {
-              console.log(data)
+              // console.log(data)
               }).save()
               .then(() => {
                 res.send("okay")
