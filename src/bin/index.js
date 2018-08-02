@@ -1,5 +1,5 @@
-var app = angular.module('nanbenda',['ngFileUpload',])
-app.controller('nbController', function ($scope,Upload,$http) { 
+var app = angular.module('nanbenda',['ngFileUpload'])
+app.controller('nbController',function ($scope,Upload, $http) { 
     // console.log('Okay')
 
     // var dialogSuccess = $mdDialog.confirm()
@@ -54,9 +54,40 @@ app.controller('nbController', function ($scope,Upload,$http) {
          alert("Something Went Wrong Try Again")
      });
     }
+
+    // $scope.popupOptions = {
+    //     width: 300,
+    //     height: 250,
+    //     contentTemplate: "info",
+    //     showTitle: true,
+    //     title: "Information",    
+    //     dragEnabled: false,
+    //     closeOnOutsideClick: true,
+    //     bindingOptions: {
+    //         visible: "visiblePopup",
+    //     }
+    // };
+    
+    // $scope.showInfo = function (data) {
+    //     $scope.currentEmployee = data.model.employee;
+    //     $scope.visiblePopup = true;
+    // };
+
+
  })
 
+//  app.controller('whatsYourNameCtrl',function($scope,$modalInstance,data){
+//     $scope.user = {name : ''};
+  
+//     $scope.cancel = function(){
+//       $modalInstance.dismiss('canceled');  
+//     }; // end cancel
+    
+//     $scope.save = function(){
+//       $modalInstance.close($scope.user.name);
+//     }; 
 
+//  })
 
 
 
@@ -73,7 +104,7 @@ app.controller('nbController', function ($scope,Upload,$http) {
 // $('iframe').hide()
 // $('.callAudio').click(function () { 
 //     console.log('done')
-//     // $('iframe').show()
+//     $('iframe').show()
 //     // $('.speakContainer').remove('.speakpic')
 //     $('.speakContainer').append('<iframe src="/audio.html" width="300" height="200" frameborder="0"></iframe>')
 //     return false

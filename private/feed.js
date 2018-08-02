@@ -17,4 +17,10 @@ app.controller('feedController', function ($scope,$http) {
         sessionStorage.setItem('item_load',e._id)
         window.location.href = '/admin.html'
      }
+
+
+     $scope.playAudio = function (d) {
+         let ul = '/'+d.audio;  
+         window.location.assign(ul);
+      }
  })
