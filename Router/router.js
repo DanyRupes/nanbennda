@@ -23,6 +23,7 @@ app.use(express.static(path.join(__dirname, '../src/libs/jquery')))
 app.use(express.static(path.join(__dirname, '../src/styles')))
 app.use(express.static(path.join(__dirname, '../src/libs/ng-file-upload-bower-10.1.8')))
 
+app.use(express.static(path.join(__dirname, '../uploads/files')))
 
 var storePropic = multer.diskStorage({
   destination : (req,file,cb) => {
@@ -84,7 +85,7 @@ app.post('/add',upload.fields([{
             startDB();
           }
           function startDB(){
-            new db.nanben({name : req.body.name,'message' : req.body.message, audio : audio_, group_pic : group_, pic1 : pic1_, pic2 : pic2_}, function (data) {
+            new db.nanben({namef : req.body.namef,namet : req.body.namet,'message' : req.body.message, audio : audio_, group_pic : group_, pic1 : pic1_, pic2 : pic2_}, function (data) {
               // console.log(data)
               }).save()
               .then(() => {
@@ -99,7 +100,15 @@ app.post('/add',upload.fields([{
   })
 
 
-  app.get('/adminData', function (req, res) { 
+  app.post('/adminData', function (req, res) { 
+    // console.log(req.body)
+    db.nanben.find({_id : req.body.id},function (err, datas) { 
+      if(err){console.log(err)}
+      else {res.json(datas)}
+     })
+   })
+
+  app.get('/item_data', function (req, res) { 
     db.nanben.find(function (err, datas) { 
       if(err){console.log(err)}
       else {res.json(datas)}

@@ -9,48 +9,66 @@
     <script  src="/jquery.min.js"></script>
     <script src="bootstrap.min.js"></script>
     <link rel="stylesheet" href="/bootstrap.min.css">
-    <link rel="stylesheet" href="/adminStyle.css">
     <link rel="stylesheet" href="angular-material.min.css">
-
+    
     <script src="/angular-min.js"></script>
     <script src="/angular-css.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/admin.css">
 </head>
 <body ng-app="adminApp" ng-controller="adminController">
+            <div class="headContainer container-fluid">
+                <ul class="hcntContainer">
+                    <li class="himgContainer"><img class="headImg" src="/images/RotaryMBS.png"></li>
+                    <li class="himgContainer" style="margin-top: 10px;"><img class="headImg" src="/images/UP_TOWN.png"></li>
+                    <li class="himgContainer3"><img class="headImg" src="/images/DistrictTheme_CB-EN.png"></li>
+                    <li class="himgContainer4"><img class="headImg" src="/images/ihihihiii.png"></li>
+                </ul>
+            </div>
     
-    <div class="container-fluid">
-        <div class="mainContainer">
-            <h1> Hello Admin</h1>
-
-            <md-content ng-cloak="" class="Main">
-                <md-card class="myCard" layout="column" ng-repeat="data in datas">
-
-                    <md-card-title>
-                        {{data.name}}
-                    </md-card-title>
-                    <md-card-content class="card grouppic">
-                        <img class="img-responsive" data-ng-href="{{data.group_pic}}">
-                        </md-card-content>
-                    <md-card-content class="card cardContent">
-                        <span class="desc">
-                            {{data.message}}
-                        </span>
-                    </md-card-content>
-                    <md-card-title>
-                        <div class="Caudio">
-                            <i class="fa fa-microphone"></i>
+            <div class="bodyContainer">
+                <div class="l_picContainer">
+                    <img class="l_pic" src="/images/MINI.png">
+                </div>
+                
+                
+                <div class="main">
+                        <form  class="main">
+                        <div class="titleName">
+                            <img class="title_pic" src="/images/titleName.png">
                         </div>
-                    </md-card-title>
-                </md-card>
-            </md-content>
-        </div>
-        <!-- <ng-audio-recorder audio-model="someModel" auto-start="false">
-               
-                <button ng-click='recorder.startRecording()'>Start</button>
-                <button ng-click='recorder.stopRecording()'>Stop</button>
-             </ng-audio-recorder> -->
-    </div>
-
+                            <div class="row boxes">
+                                
+                            <div class="addBoxLeft col-md-4 col-sm-4" style="background: url({{Data.pic1}}); background-size: cover; background-repeat: no-repeat; background-position: center center">
+                                <input class="leftBoxInput" ng-model="pic1">
+                                <input ng-readonly="true"  style="color: white;" type="text" ng-value="Data.namef" class="leftboxpic">
+                                <!-- <img  src="../images/leftbox.png"> -->
+                            </div>
+                            <div class="addGrpBox col-md-4 col-sm-4" style="background: url({{Data.group_pic}}); background-size: cover; background-repeat: no-repeat; background-position: center center">
+                                <input class="grouppic" >
+                            </div>
+                            <div class="addBoxRight col-md-4 col-sm-4" style="background: url({{Data.pic2}}); background-size: cover; background-repeat: no-repeat; background-position: center center">
+                                <!-- righttBoxInput -->
+                                    <input class="righttBoxInput" ng-model="pic2"  >
+                                <!-- <img  src="/images/rightboxNew2.png"> -->
+                                <input ng-readonly="true" ng-value="Data.namet" style="color: white"   class="rightboxpic">
+                            </div>
+                        </div>
+    
+                        <div class="messageContainer">
+                            <input ng-value="Data.message" class="msgpic" type="text" >
+                        </div>
+                        <div class="speakContainer">
+                                <input  class="speakpic callAudio" ngf-multiple="false"  ngf-select="audio" ng-model="audio" accept="audio/*"capture id="recorder">
+     
+                        </div>
+                        <div class="submitContainer">
+                            <input type="submit" ng-click="submit();">
+                        </div>
+                        </form>
+                    </div>
+    
+            </div>
 
     <script src="/admin.js"></script>
 </body>
