@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin</title>
+
+    <script  src="/jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/bootstrap.min.css">
+    <link rel="stylesheet" href="angular-material.min.css">
+    
+    <script src="/angular-min.js"></script>
+    <script src="/angular-css.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/feed.css">
+</head>
+<body ng-app="feedApp" ng-controller="feedController">
+    
+    <div class="container-fluid">
+        <div class="mainContainer">
+            <h1> Hello Admin</h1>
+
+            <md-content ng-cloak="" class="Main">
+                <md-card class="myCard" layout="column" ng-repeat="data in datas">
+                    <md-card-title>
+                            <md-card-title class="top_names">
+                                   FROM :  <span class="emp_Space">{{data.namef}}</span>
+                            </md-card-title>
+                    </md-card-title>
+                    <md-card-content class="card grouppic" ng-click="item(data)">
+                        <img class="img-responsive" data-ng-src="{{data.group_pic}}">
+                        </md-card-content>
+                </md-card>
+            </md-content>
+        </div>
+    </div>
+
+
+    <script src="/feed.js"></script>
+</body>
+</html>
