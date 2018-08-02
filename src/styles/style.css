@@ -129,6 +129,23 @@ body .container-fluid {
     background-position: center center;
 
 }
+.boxes .addBoxRight {
+    /* flex: 1 auto; */
+    /* flex: 1 auto; */
+    /* min-width: 40%; */
+    margin: 0px 10px 0px 10px;
+    min-width: 27%;
+    min-height: 95px;
+    background: url(/images/rightboxNew2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+}
+.addBoxLeft .leftBoxInput {
+    width: 100px;
+
+}
 .addBoxLeft .leftboxpic {
     width: 101%;
     height: 16%;
@@ -136,9 +153,24 @@ body .container-fluid {
     position: absolute;
     left: 0;
     background-color: transparent;
-    font-size: 8px;
+    font-size: 12px;
     padding: 0px 3px 0px 3px;
     border: .1px solid greenyellow;
+    color: black;
+    text-align: center;
+}
+.addBoxRight .rightboxpic {
+    width: 101%;
+    height: 16%;
+    top: 53px;
+    position: absolute;
+    left: 0;
+    background-color: transparent;
+    font-size: 12px;
+    padding: 0px 3px 0px 3px;
+    border: .1px solid greenyellow;
+    text-align: center;
+    color: black;
 }
 .boxes .addGrpBox {
     min-width: 54px;
@@ -156,17 +188,8 @@ body .container-fluid {
     top: 22px;
     left: 0;
 }
-.boxes .addBoxRight {
-    /* flex: 1; */
-    min-width: 35%;
-    min-height: 65px;
-    min-width: 98px;
-    min-height: 109px;
-}
-.addBoxRight img {
-    width: 100%;
-    height: 100%;
-}
+
+
 .messageContainer {
     width: 153%;
     height: 101px;
@@ -276,16 +299,53 @@ body .container-fluid {
         background-repeat: no-repeat;
         background-position: center center;
     }
+    .boxes .addBoxRight {
+        min-width: 39%;
+        min-height: 133px;
+        background: url(/images/rightboxNew2.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    .addBoxLeft .leftBoxInput {
+        width: 47px;
+        height: 39px;
+        position: relative;
+        left: 8px;
+        opacity: 0;
+        top: 18px;
+    }
     .addBoxLeft .leftboxpic {
         width: 101%;
-        height: 16%;
-        top: 74px;
+        height: 17%;
+        top: 75px;
         position: absolute;
         left: 0;
         background-color: transparent;
-        font-size: 8px;
+        font-size: 14px;
         padding: 0px 3px 0px 3px;
         border: .1px solid greenyellow;
+        color: black;
+    }
+    .addBoxRight .rightboxpic {
+        width: 101%;
+        height: 17%;
+        top: 75px;
+        position: absolute;
+        left: 0;
+        background-color: transparent;
+        font-size: 14px;
+        padding: 0px 3px 0px 3px;
+        border: .1px solid greenyellow;
+        color: black;
+    }
+    .addBoxRight .righttBoxInput {
+        width: 47px;
+        height: 39px;
+        position: relative;
+        left: 8px;
+        opacity: 0;
+        top: 18px;
     }
     .bodyContainer .l_picContainer {
         /* width: calc(100%); */
@@ -314,12 +374,9 @@ body .container-fluid {
         top: 22px;
         left: 0;
     }
-    .boxes .addBoxRight {
-        min-width: 53%;
-    min-height: 132px;
-}
+
     .messageContainer {
-        top: -24px;
+        top: -30px;
         width: 122%;
         /* padding: 70px; */
         height: 93px;
@@ -376,8 +433,8 @@ body .container-fluid {
 }
 @media screen and (max-width : 375px){
     .speakContainer {
-        width: 25%;
-        height: 58px;
+        width: 17%;
+        height: 42px;    
         margin-top: 10px;
         position: relative;
         background: url(/images/voice.png);
@@ -401,6 +458,31 @@ body .container-fluid {
         top: -17px;
         left: -11px;
     }
+    .addBoxLeft .leftboxpic {
+        width: 101%;
+        height: 17%;
+        top: 75px;
+        position: absolute;
+        left: 0;
+        background-color: transparent;
+        font-size: 14px;
+        padding: 0px 3px 0px 3px;
+        border: .1px solid greenyellow;
+        color: black;
+    }
+    .addBoxRight .rightboxpic {
+        width: 101%;
+        height: 17%;
+        top: 75px;
+        position: absolute;
+        left: 0;
+        background-color: transparent;
+        font-size: 14px;
+        padding: 0px 3px 0px 3px;
+        border: .1px solid greenyellow;
+        color: black;
+    }
+    
 }
 
 @media screen and (min-width : 320px) and (max-width : 375px){
@@ -421,10 +503,7 @@ body .container-fluid {
         left: -31px;
         max-width: 79%;
     }
-    .boxes .addBoxRight {
-        min-width: 53%;
-        min-height: 90px;
-    }
+
     .boxes .addBoxLeft {
         min-width: 35%;
         min-height: 94px;
@@ -435,7 +514,55 @@ body .container-fluid {
         /* left: 10px; */
         /* padding-right: 10px; */
     }
+    .boxes .addBoxRight {
+        min-width: 35%;
+        min-height: 94px;
+        background: url(/images/rightboxNew2.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        /* left: 10px; */
+        /* padding-right: 10px; */
+    }
+    .addBoxLeft .leftBoxInput {
+        width: 32px;
+        height: 27px;
+        position: relative;
+        left: 1px;
+        opacity: 0;
+        top: 13px;
+
+    }
+    .addBoxLeft .leftBoxInput {
+        width: 32px;
+        height: 27px;
+        position: relative;
+        left: 6px;
+        opacity: 0;
+        top: 13px;
+
+    }
+    .addBoxRight .righttBoxInput {
+        width: 32px;
+        height: 27px;
+        position: relative;
+        left: 1px;
+        opacity: 0;
+        top: 13px;
+
+    }
     .addBoxLeft .leftboxpic {
+        width: 101%;
+        height: 16%;
+        top: 53px;
+        position: absolute;
+        left: 0;
+        background-color: transparent;
+        font-size: 8px;
+        padding: 0px 3px 0px 3px;
+        border: .1px solid greenyellow;
+    }
+    .addBoxRight .rightboxpic {
         width: 101%;
         height: 16%;
         top: 53px;
@@ -471,13 +598,10 @@ body .container-fluid {
         top: 22px;
         left: 0;
     }
-    .boxes .addBoxRight {
-        min-width: 51%;
-        min-height: 90px;
-    }    
+    
     .messageContainer {
         top: -24px;
-        width: 122%;
+        width: 110%;
         /* padding: 70px; */
         height: 93px;
         padding-bottom: 10px;
@@ -488,7 +612,7 @@ body .container-fluid {
         background-position: center center;
     }
     .messageContainer .msgpic {
-        width: calc(100% - 10px);
+        width: calc(100% - 17px);
         /* width: 100%; */
         height: 68%;
         /* padding-right: 100px; */
@@ -498,7 +622,7 @@ body .container-fluid {
         background-repeat: no-repeat;
         background-position: center center;
         left: 5px;
-        top: 31px;
+        top: 34px;
         line-height: 10px !important;
         border: none;
         outline: none;
@@ -532,8 +656,8 @@ body .container-fluid {
 }
 @media screen and (max-width : 280px){
     .speakContainer {
-        width: 33%;
-        height: 58px;
+        width: 18%;
+        height: 34px;
         margin-top: 10px;
         position: relative;
         background: url(/images/voice.png);
@@ -594,6 +718,32 @@ body .container-fluid {
         background-repeat: no-repeat;
         background-position: center center;
     }
+    .boxes .addBoxRight {
+        min-width: 37%;
+        min-height: 74px;
+        background: url(/images/rightboxNew2.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    .addBoxLeft .leftBoxInput {
+        width: 32px;
+        height: 27px;
+        position: relative;
+        left: -2px;
+        opacity: 0;
+        top: 7px;
+
+    }
+    .addBoxRight .righttBoxInput {
+        width: 32px;
+        height: 27px;
+        position: relative;
+        left: -2px;
+        opacity: 0;
+        top: 7px;
+
+    }
     .boxes .addGrpBox {
         min-width: 55px;
         min-height: 49px;
@@ -605,10 +755,6 @@ body .container-fluid {
         position: relative;
         top: 12px;
     
-        }
-        .boxes .addBoxRight {
-            min-width: 60%;
-            min-height: 66px;
         }
         .messageContainer {
             top: -24px;
@@ -679,7 +825,42 @@ body .container-fluid {
         background-repeat: no-repeat;
         background-position: center center;
     }
+    .boxes .addBoxRight {
+        min-width: 37%;
+        min-height: 63px;
+        background: url(/images/rightboxNew2.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    .addBoxLeft .leftBoxInput {
+        width: 32px;
+        height: 27px;
+        position: relative;
+        left: -9px;
+        opacity: 0;
+        top: 7px;
+    }
+    .addBoxRight .righttBoxInput {
+        width: 32px;
+        height: 27px;
+        position: relative;
+        left: -9px;
+        opacity: 0;
+        top: 7px;
+    }
     .addBoxLeft .leftboxpic {
+        width: 101%;
+        height: 16%;
+        top: 74px;
+        position: absolute;
+        left: 0;
+        background-color: transparent;
+        font-size: 8px;
+        padding: 0px 3px 0px 3px;
+        border: .1px solid greenyellow;
+    }
+    .addBoxRight .rightboxpic {
         width: 101%;
         height: 16%;
         top: 74px;
@@ -709,10 +890,7 @@ body .container-fluid {
         top: 22px;
         left: 0;
     }
-    .boxes .addBoxRight {
-        min-width: 65%;
-        min-height: 58px;
-    }
+
     .messageContainer {
         top: -30px;
         width: 81%;
@@ -746,8 +924,8 @@ body .container-fluid {
         text-align: center;
     }
     .speakContainer {
-        width: 34%;
-        height: 46px;
+        width: 16%;
+        height: 29px;
         margin-top: 1px;
         position: relative;
         background: url(/images/voice.png);
@@ -757,6 +935,45 @@ body .container-fluid {
         border: none;
         outline: none;
         top: -17px;
+    }
+}
+@media screen and (min-width : 460px ){
+    .addBoxLeft .leftBoxInput {
+        width: 47px;
+        height: 39px;
+        position: relative;
+        left: 14px;
+        opacity: 0;
+        top: 18px;
+    }
+    .addBoxRight .righttBoxInput {
+        width: 47px;
+        height: 39px;
+        position: relative;
+        left: 16px;
+        opacity: 0;
+        top: 18px;
+    }
+}
+@media screen and (min-width : 315px) and (max-width : 320px){
+    .speakContainer {
+        height: 37px;
+        width: 19%;
+    }
+}
+@media screen and (min-width : 465px){
+    .speakContainer {
+        width: 14%;
+        height: 53px;
+        margin-top: 10px;
+        position: relative;
+        background: url(/images/voice.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        border: none;
+        outline: none;
+        top: -18px;
     }
 }
 /* iframe {

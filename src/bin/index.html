@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Nanbenda</title>
+    <title>Nannbenda</title>
+
+    <script src="/angular-min.js"></script>
+    <script type="text/javascript" src="/ng-file-upload.min.js"></script>
+    <script type="text/javascript" src="/ng-file-upload-shim.min.js"></script> 
+
     <script src="/jquery.min.js"></script>
     <link rel="stylesheet" href="/bootstrap.min.css">
     <script src="bootstrap.min.js"></script>
     <link rel="stylesheet" href="/style.css">
-    <script src="/angular-min.js"></script>
-    <script type="text/javascript" src="/ng-file-upload.min.js"></script>
-    <script type="text/javascript" src="/ng-file-upload-shim.min.js"></script> 
 </head>
 <body class="container-fluid" ng-app="nanbenda" ng-controller="nbController">
 
@@ -37,14 +39,18 @@
                     </div>
                         <div class="row boxes">
                         <div class="addBoxLeft col-md-4 col-sm-4">
-                            <input type="text" ng-model="name" class="leftboxpic">
+                            <input ngf-select="pic1" ngf-multiple="false" class="leftBoxInput" ngf-max-size="5MB" accept="image/*" ng-model="pic1">
+                            <input placeholder="Enter Name" style="color: white;" type="text" ng-model="namef" class="leftboxpic">
                             <!-- <img  src="../images/leftbox.png"> -->
                         </div>
                         <div class="addGrpBox col-md-4 col-sm-4">
-                            <input class="grouppic"  ngf-select="$group_pic"  ngf-max-size="10MB" accept="image/*" ng-model="group_pic">
+                            <input class="grouppic" ngf-select="$group_pic" ngf-multiple="false"  ngf-max-size="10MB" accept="image/*" ng-model="group_pic">
                         </div>
                         <div class="addBoxRight col-md-4 col-sm-4">
-                            <img  src="/images/rightboxNew2.png">
+                            <!-- righttBoxInput -->
+                                <input class="righttBoxInput" ngf-select="pic2" ngf-multiple="false" class="" ngf-max-size="5MB" accept="image/*" ng-model="pic2">
+                            <!-- <img  src="/images/rightboxNew2.png"> -->
+                            <input type="text" placeholder="Enter Name"  style="color: white"  ng-model="namet" class="rightboxpic">
                         </div>
                     </div>
 
@@ -52,7 +58,7 @@
                         <input ng-model="message" class="msgpic" type="text" placeholder="Your Message....">
                     </div>
                     <div class="speakContainer">
-                            <input  class="speakpic callAudio"  ngf-select="audio" ng-model="audio" accept="audio/*"capture id="recorder">
+                            <input  class="speakpic callAudio" ngf-multiple="false"  ngf-select="audio" ng-model="audio" accept="audio/*"capture id="recorder">
  
                     </div>
                     <div class="submitContainer">

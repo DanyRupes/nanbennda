@@ -1,6 +1,6 @@
 var mongoose = require('mongoose')
 // mongoose.connect("mongodb://localhost:27017/shop")
-// url = 'mongodb://localhost:27017/shop'
+// url = 'mongodb://localhost:27017/nanbenda'
 //  url = 'mongodb://danyrupes:danyrupes007@ds119171.mlab.com:19048/nanbenda'
 //  url = 'mongodb://danyrupes:danyrupes007@ds019048.mlab.com:19048/nanbenda'
  url = 'mongodb://danyrupes:danyrupes007@ds019048.mlab.com:19048/nanbenda'
@@ -20,8 +20,8 @@ var nanbans = new Schema({
     message : String,
     group_pic : String,
     audio : String,
-    // email : String,
-    // password : String,
+    pic1 : String,
+    pic2 : String
 })
 
 var nanben = mongoose.model("nanben", nanbans);

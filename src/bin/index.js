@@ -1,25 +1,83 @@
-var app = angular.module('nanbenda',['ngFileUpload'])
+var app = angular.module('nanbenda',['ngFileUpload',])
 app.controller('nbController', function ($scope,Upload,$http) { 
     // console.log('Okay')
 
-    // name, audio, message, audio
+    // var dialogSuccess = $mdDialog.confirm()
+    // .title('Success')
+    // .textContent('Submitted Successfully')
+    // .ok('Okay')
+    // . clickOutsideToClose(true)
+    // $scope.nullMe = function () { 
+    //     console.log("ohhhh")
+    //     // return true
+    //  }
+
     $scope.submit = function () { 
-        // console.log($scope.name)
-        // console.log($scope.message)
-        // console.log($scope.audio)
-        // console.log(localStorage.getItem('audio_'))
-        var audio_,group_pic;
-        try {
-            audio_ = $scope.audio;
-            group_pic = $scope.group_pic;
-            // audio_ = localStorage.getItem('audio_') 
-        }
-        catch(e){
-            console.log('Not available Audio')
-            audio_ = 'undefined';
-            group_pic = 'undefined';
-        }
-        // console.log('Audio' + audio_)
+        var audio_,group_pic,pic1,pic2;
+
+
+            audio_ = $scope.audio; 
+            group_pic = $scope.group_pic;        
+            pic1 = $scope.pic1; 
+            pic2 = $scope.pic2; 
+            console.log($scope.namef)
+            console.log($scope.namet)
+            console.log($scope.message)
+            console.log(group_pic)
+            console.log(audio_)
+            console.log(pic1)
+            console.log(pic2)
+            if(pic1 == undefined || pic2 == undefined){
+                alert("Please Include Pictures and Submit")
+                return false
+            }
+       Upload.upload({
+         url : '/add',
+         method : 'POST',
+         data : {
+             namef : $scope.namef,
+             namet : $scope.namet,
+             message : $scope.message,
+             group_pic : group_pic,
+             audio : audio_,
+             pic1 : pic1,
+             pic2 : pic2
+         }
+     }).then((result) => {
+         console.log(result)
+         alert("successfully submitted")
+         window.location.reload()
+     }).catch((err) => {
+         console.log(err)
+         alert("Something Went Wrong Try Again")
+     });
+    }
+ })
+
+
+
+
+
+
+
+
+
+
+
+// var callAudio = document.querySelector('.callAudio')
+// callAudio.addEventListener('click',function (e) {  
+//     console.log('done')
+// })
+// $('iframe').hide()
+// $('.callAudio').click(function () { 
+//     console.log('done')
+//     // $('iframe').show()
+//     // $('.speakContainer').remove('.speakpic')
+//     $('.speakContainer').append('<iframe src="/audio.html" width="300" height="200" frameborder="0"></iframe>')
+//     return false
+//  })
+
+         // console.log('Audio' + audio_)
 
         // let _audio = audio_.split('/')[3]
         // let _audio = audio_.replace('blob:','')
@@ -36,46 +94,6 @@ app.controller('nbController', function ($scope,Upload,$http) {
         // });
         // var fd = new FormData();
         // fd.append('audio', audio_, 'blobby.txt');
-
-       Upload.upload({
-         url : '/add',
-         method : 'POST',
-         data : {
-             name : $scope.name,
-             message : $scope.message,
-             group_pic : group_pic,
-             audio : audio_,
-         }
-     }).then((result) => {
-         console.log(result)
-     }).catch((err) => {
-         console.log(err)
-     });
-    }
- })
-
-
-
-
-
-
-
-
-
-
-
-var callAudio = document.querySelector('.callAudio')
-callAudio.addEventListener('click',function (e) {  
-    console.log('done')
-})
-$('iframe').hide()
-$('.callAudio').click(function () { 
-    console.log('done')
-    // $('iframe').show()
-    // $('.speakContainer').remove('.speakpic')
-    $('.speakContainer').append('<iframe src="/audio.html" width="300" height="200" frameborder="0"></iframe>')
-    return false
- })
 // // <script>
 // window.fbAsyncInit = function() {
 //   FB.init({
