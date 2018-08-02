@@ -15,7 +15,7 @@ app.controller('nbController', function ($scope,Upload,$http) {
     $scope.submit = function () { 
         var audio_,group_pic,pic1,pic2;
 
-
+        document.querySelector('.overlay').style.display = "block";
             audio_ = $scope.audio; 
             group_pic = $scope.group_pic;        
             pic1 = $scope.pic1; 
@@ -44,6 +44,7 @@ app.controller('nbController', function ($scope,Upload,$http) {
              pic2 : pic2
          }
      }).then((result) => {
+        document.querySelector('.overlay').style.display = "none";
          console.log(result)
          alert("successfully submitted")
          window.location.reload()
