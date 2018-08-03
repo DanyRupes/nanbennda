@@ -3,7 +3,7 @@ const app = express()
 const fs = require('fs')
 const path = require('path')
 const router = require('./Router/router.js')
-const port = 443;
+const port = 80;
 app.use('/', router)
 // console.log(path.join(__dirname,router))
 const https = require('https')
@@ -22,9 +22,10 @@ const httpsOptions = {
     key : fs.readFileSync(path.join(__dirname, 'certificates','private.pem')),
     cert : fs.readFileSync(path.join(__dirname, 'certificates','certificate.crt')),
 }
-https.createServer(httpsOptions, app)
-.listen(port, function () { 
-    console.log(port)
+https.createServer(httpsOptions,app)
+.listen(443, function () { 
+    console.log("443")
  })
 
+app.listen(port,()=>{console.log(port)})
 
