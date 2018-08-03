@@ -11,7 +11,6 @@ app.controller('adminController', function ($scope,$http) {
             url : '/adminData',
             data : {
                 id : sid,
-                name : "Dany"
             }
         }).then((out)=>{
             console.log(out.data[0])
@@ -20,5 +19,9 @@ app.controller('adminController', function ($scope,$http) {
             console.log($scope.Data.pic1)
         }).catch((err)=>{console.log(err)})
         .then(console.log($scope.Data))
+    }
+
+    else {
+        alert('Bro Select from //feed.html')
     }
  })

@@ -1,5 +1,5 @@
 var app = angular.module('nanbenda',['ngFileUpload'])
-app.controller('nbController',function ($scope,Upload, $http) { 
+app.controller('nbController',function ($scope,Upload, $http,$window) { 
     // console.log('Okay')
 
     // var dialogSuccess = $mdDialog.confirm()
@@ -11,27 +11,40 @@ app.controller('nbController',function ($scope,Upload, $http) {
     //     console.log("ohhhh")
     //     // return true
     //  }
-
+    
     $scope.submit = function () { 
-        var audio_,group_pic,pic1,pic2;
-
+        var audio_,group_pic,pic1={},pic2={};
       
             audio_ = $scope.audio; 
             group_pic = $scope.group_pic;        
             pic1 = $scope.pic1; 
             pic2 = $scope.pic2; 
-            console.log($scope.namef)
-            console.log($scope.namet)
-            console.log($scope.message)
-            console.log(group_pic)
-            console.log(audio_)
+            pic1.name = pic1.name.replace(/[\s]/g, '')
+            // console.log($scope.namef)
+            // console.log($scope.namet)
+            // console.log($scope.message)
+            // console.log(group_pic)
+            // console.log(audio_)
             console.log(pic1)
-            console.log(pic2)
+           
+            // console.log(pic2)
             if(pic1 == undefined || pic2 == undefined){
                 alert("Please Include Pictures and Submit")
                 return false
             }
-            document.querySelector('.overlay').style.display = "block";
+
+            // let myBlob = localStorage.getItem('myBlob')
+            // let blobUrl = myBlob.substring(5);
+            // console.log(blobUrl)
+            // document.querySelector('.overlay').style.display = "block";
+            // var config = { responseType : 'blob'}
+
+            // $http.get(blobUrl, config).then(function onSuccess(response) {
+            //     var blob = response.data;
+            //     var contentType = response.headers("content-type");
+            //     var fileURL = URL.createObjectURL(blob);
+            //     window.open(fileURL); 
+            //   })
        Upload.upload({
          url : '/add',
          method : 'POST',
@@ -40,7 +53,7 @@ app.controller('nbController',function ($scope,Upload, $http) {
              namet : $scope.namet,
              message : $scope.message,
              group_pic : group_pic,
-             audio : audio_,
+            //  audio : myBlob,
              pic1 : pic1,
              pic2 : pic2
          }
@@ -55,6 +68,23 @@ app.controller('nbController',function ($scope,Upload, $http) {
      });
     }
 
+    $scope.getaudio = function () { 
+        console.log("hiii")
+        console.log("before")
+        $window.open("/audio.html", "popup", "width=500,height=200,left=10,top=150");
+        console.log("after")
+
+     }
+    // $scope.pic1_change = function (ev) { 
+    //     console.log("hooooo")
+
+    //     $scope.pic1 = "Added"
+    //  }
+
+
+
+
+ })
     // $scope.popupOptions = {
     //     width: 300,
     //     height: 250,
@@ -72,10 +102,6 @@ app.controller('nbController',function ($scope,Upload, $http) {
     //     $scope.currentEmployee = data.model.employee;
     //     $scope.visiblePopup = true;
     // };
-
-
- })
-
 //  app.controller('whatsYourNameCtrl',function($scope,$modalInstance,data){
 //     $scope.user = {name : ''};
   

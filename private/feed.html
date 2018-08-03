@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Admin</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <script  src="/jquery.min.js"></script>
     <script src="bootstrap.min.js"></script>
@@ -17,7 +18,9 @@
     <link rel="stylesheet" href="/feed.css">
 </head>
 <body ng-app="feedApp" ng-controller="feedController">
-    
+        <div class="overlay">
+                <div class="overlay_text">Please Wait</div>
+            </div>
     <div class="container-fluid">
         <div class="mainContainer">
             <h1> Hello Admin</h1>

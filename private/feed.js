@@ -11,8 +11,9 @@ app.controller('feedController', function ($scope,$http) {
 
 
     sessionStorage.setItem('item_load',null)
-    
+    document.querySelector('.overlay').style.display = "none";
     $scope.item = function (e) { 
+        document.querySelector('.overlay').style.display = "block";
         console.log(e._id)
         sessionStorage.setItem('item_load',e._id)
         window.location.href = '/admin.html'

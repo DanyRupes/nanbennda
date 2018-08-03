@@ -1,11 +1,30 @@
-var express = require('express')
-var app = express()
-var router = require('./Router/router.js')
+const express = require('express')
+const app = express()
+const fs = require('fs')
+const path = require('path')
+const router = require('./Router/router.js')
+const port = 443;
 app.use('/', router)
+// console.log(path.join(__dirname,router))
+const https = require('https')
 
 
-
-
-var port = 80;
-app.listen(port)
+// var key = fs.readFileSync(path.join(__dirname, './certificates/private.pem'))
+// var cert = fs.readFileSync(path.resolve(__dirname, './certificates/certificate.pem'))
+// var ca = fs.readFileSync(path.resolve(__dirname, './certificates/ca_bundle.pem'))
+// app.listen(port)
 // console.log('http://localhost:8080')
+
+
+
+
+const httpsOptions = {
+    key : fs.readFileSync(path.join(__dirname, 'certificates','private.pem')),
+    cert : fs.readFileSync(path.join(__dirname, 'certificates','certificate.crt')),
+}
+https.createServer(httpsOptions, app)
+.listen(port, function () { 
+    console.log(port)
+ })
+
+

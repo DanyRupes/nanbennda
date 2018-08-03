@@ -3,7 +3,8 @@ var app = express()
 var path = require('path')
 var bodyparser = require('body-parser')
 app.use(bodyparser.json())
-app.use(bodyparser.urlencoded({extended:true}))
+var limitmyData = '10mb'
+app.use(bodyparser.urlencoded({extended:true, limit : limitmyData}))
 var db = require('../database.js')
 var multer = require('multer');
 var ms = require('mediaserver')
@@ -24,28 +25,43 @@ app.use(express.static(path.join(__dirname, '../src/styles')))
 app.use(express.static(path.join(__dirname, '../src/libs/ng-file-upload-bower-10.1.8')))
 
 app.use(express.static(path.join(__dirname, '../uploads/files')))
+app.use(express.static(path.join(__dirname, '../uploads/audi')))
+
+
+//////////////////////////////
+var myAudioFile = [];
 
 var storePropic = multer.diskStorage({
   destination : (req,file,cb) => {
       cb(null, 'uploads/files')
   },
   filename : (req, file, cb) => {
-    // console.log(file)
+    console.log(file)
+    
       cb(null, file.originalname)
   }
 })
-var storeAudio = multer.diskStorage({
+var storeAudi = multer.diskStorage({
   destination : (req,file,cb) => {
-      cb(null, 'uploads/audios')
+      cb(null, 'uploads/audi')
   },
   filename : (req, file, cb) => {
-    // console.log(req,cb,file)
-      cb(null, file.filename)
+      cb(null, file.originalname)
   }
 })
-var upload = multer({storage : storePropic})
-var storeAudio = multer({storage : storeAudio})
 
+
+
+// var type = multer({storage : upload1})
+
+var upload = multer({storage : storePropic})
+var upload1 = multer({storage : storeAudi})
+
+
+app.post('/postAudio',upload1.single('audi'), function (req, res) { 
+    myAudioFile.push(req.file.originalname)
+    res.send("fine")
+ })
 
 app.post('/add',upload.fields([{
   name : 'group_pic', maxCount : 1
@@ -56,10 +72,12 @@ app.post('/add',upload.fields([{
 },{
   name : 'pic2', maxCount  :1
 }]), function (req, res) { 
-  // console.log(req)
-  var audio_,group_,pic1_,pic2_;
+  var group_,pic1_,pic2_;
+  var audio_ = myAudioFile
           try {
-            audio_ = req.files.audio[0].originalname;
+            if(audio_ == 0) {
+              audio_ = 0;
+            }
           }
           catch(e){
             audio_ = 'undefined'
@@ -86,7 +104,7 @@ app.post('/add',upload.fields([{
           }
           function startDB(){
             new db.nanben({namef : req.body.namef,namet : req.body.namet,'message' : req.body.message, audio : audio_, group_pic : group_, pic1 : pic1_, pic2 : pic2_}, function (data) {
-              // console.log(data)
+  
               }).save()
               .then(() => {
                 res.send("okay")
@@ -115,3 +133,13 @@ app.post('/add',upload.fields([{
      })
    })
 module.exports = app
+
+// var upload1 = multer({ dest: __dirname + '/uploads/audios'});
+// var upload1 = multer.diskStorage({
+//   destination : function(req, file, cb){
+//     cb(null, 'uploads/audios')
+//   },
+//   filename : function (req, file, cb) { 
+//     cb(null, file.filename)
+//    }
+// })

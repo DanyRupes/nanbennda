@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Nannbenda</title>
     <script  src="/jquery.min.js" type="text/javascript" ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="/bootstrap.min.css">
     <script   src="/bootstrap.min.js" type="text/javascript"></script>
     <script src="/angular-min.js" type="text/javascript"></script>
@@ -20,7 +21,8 @@
     <!-- <link rel="dx-theme" data-theme="generic.light" href="https://cdn3.devexpress.com/jslib/18.1.4/css/dx.light.css" /> -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script> -->
 
-    <link rel="stylesheet" href="/style.css">
+    <!-- <link rel="stylesheet" href="/style.css"> -->
+    <link rel="stylesheet" href="/test.css">
 </head>
 <body class="container-fluid" ng-app="nanbenda" ng-controller="nbController">
 
@@ -47,39 +49,29 @@
                     <div class="titleName">
                         <img class="title_pic" src="/images/titleName.png">
                     </div>
-                        <div class="row boxes">
-                        <div class="addBoxLeft col-md-4 col-sm-4">
-                            <input ngf-select="pic1" ngf-multiple="false" class="leftBoxInput" ngf-max-size="10MB" accept="image/*" ng-model="pic1">
-                            <input placeholder="Enter Name" style="color: white;" type="text" ng-model="namef" class="leftboxpic">
+                        <div class=" boxes">
+                        <div class="BigBox " style="background: url(/images/lefftboxNew2.png)">
+                            <input ngf-select="pic1"  ngf-multiple="false" class="picInput" ngf-max-size="10MB" accept="image/*" ng-model="pic1">
+                            <input placeholder="Enter Name" style="color: white;" type="text" ng-model="namef" class="textInput">
                             <!-- <img  src="../images/leftbox.png"> -->
                         </div>
-                        <div class="addGrpBox col-md-4 col-sm-4">
+                        <div class="addGrpBox ">
                             <input class="grouppic" ngf-select="$group_pic" ngf-multiple="false"  ngf-max-size="10MB" accept="image/*" ng-model="group_pic">
                         </div>
-                        <div class="addBoxRight col-md-4 col-sm-4">
+                        <div class="BigBox " style="background: url(/images/rightboxNew2.png)">
                             <!-- righttBoxInput -->
-                                <input class="righttBoxInput" ngf-select="pic2" ngf-multiple="false" class="" ngf-max-size="10MB" accept="image/*" ng-model="pic2">
+                                <input class="picInput" ngf-select="pic2" ngf-multiple="false" class="" ngf-max-size="10MB" accept="image/*" ng-model="pic2">
                             <!-- <img  src="/images/rightboxNew2.png"> -->
-                            <input type="text" placeholder="Enter Name"  style="color: white"  ng-model="namet" class="rightboxpic">
+                            <input type="text" placeholder="Enter Name"  style="color: white"  ng-model="namet" class="textInput">
                         </div>
                     </div>
 
                     <div class="messageContainer">
                         <input ng-model="message" class="msgpic" type="text" placeholder="Your Message....">
                     </div>
-                    <div class="speakContainer">
-                            <div class="button-info" dx-button="{ 
-                                text: 'Details', 
-                                onClick: showInfo 
-                            }"></div>
-                            <div class="popup" 
-                            dx-popup="popupOptions">
-                            <div data-options="dxTemplate: { name:'info' }">
-    
-                            </div>
-                        </div> 
+                    <div class="speakContainer" ng-click="getaudio();">
                         <!-- ngf-select="audio" -->
-                            <input  class="speakpic callAudio" ngf-select="audio"  ng-model="audio" accept="audio/*"capture id="recorder">
+                            <input  class="speakpic callAudio" name="audio"  ng-model="audio" accept="audio/*"capture id="recorder">
  
                     </div>
                     <div class="submitContainer">
