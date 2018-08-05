@@ -12,69 +12,65 @@
     <script src="/angular-min.js" type="text/javascript"></script>
     <script  src="/ng-file-upload.min.js" type="text/javascript"></script>
     <script src="/ng-file-upload-shim.min.js" type="text/javascript"></script> 
-<!-- 
-    <script src="/dialogs.min.js" type="text/javascript"></script>
-
-    <script src="/ui-bootstrap-tpls-0.6.0.js" type="text/javascript"></script> -->
-    <!-- <link rel="stylesheet" type="text/css" href="https://cdn3.devexpress.com/jslib/18.1.4/css/dx.spa.css" /> -->
-    <!-- <link rel="stylesheet" type="text/css" href="https://cdn3.devexpress.com/jslib/18.1.4/css/dx.common.css" /> -->
-    <!-- <link rel="dx-theme" data-theme="generic.light" href="https://cdn3.devexpress.com/jslib/18.1.4/css/dx.light.css" /> -->
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script> -->
-
-    <!-- <link rel="stylesheet" href="/style.css"> -->
-    <link rel="stylesheet" href="/test.css">
+    
+    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="/ind320-359.css">
+    <link rel="stylesheet" href="/ind360-444.css">
+    <link rel="stylesheet" href="/ind445-579.css">
+    <link rel="stylesheet" href="/indMax319.css">
+    <!-- <link rel="stylesheet" href="/indMin580.css"> -->
 </head>
-<body class="container-fluid" ng-app="nanbenda" ng-controller="nbController">
+<body class="container-fluid" ng-app="nanbenda" ng-controller="nbController" style="background: url('https://s3.ap-south-1.amazonaws.com/nannbenda.ml/index_pic/images/bgcoverNew1.jpg') center center;;background-size: cover;    background-size: cover;    background-repeat: no-repeat">
 
 <div class="overlay">
     <div class="overlay_text">Please Wait</div>
 </div>
         <div class="headContainer container-fluid">
             <ul class="hcntContainer">
-                <li class="himgContainer"><img class="headImg" src="/images/RotaryMBS.png"></li>
-                <li class="himgContainer" style="margin-top: 10px;"><img class="headImg" src="/images/UP_TOWN.png"></li>
-                <li class="himgContainer3"><img class="headImg" src="/images/DistrictTheme_CB-EN.png"></li>
-                <li class="himgContainer4"><img class="headImg" src="/images/ihihihiii.png"></li>
+                <li class="himgContainer"><img class="headImg" src="https://s3.ap-south-1.amazonaws.com/nannbenda.ml/index_pic/images/RotaryMBS.png"></li>
+                <li class="himgContainer" style="margin-top: 10px;"><img class="headImg" src="https://s3.ap-south-1.amazonaws.com/nannbenda.ml/index_pic/images/UP_TOWN.png"></li>
+                <li class="himgContainer3"><img class="headImg" src="https://s3.ap-south-1.amazonaws.com/nannbenda.ml/index_pic/images/DistrictTheme_CB-EN.png"></li>
+                <li class="himgContainer4"><img class="headImg" src="https://s3.ap-south-1.amazonaws.com/nannbenda.ml/index_pic/images/ihihihiii.png"></li>
             </ul>
         </div>
 
         <div class="bodyContainer">
             <div class="l_picContainer">
-                <img class="l_pic" src="/images/MINI.png">
+                <img class="l_pic" src="https://s3.ap-south-1.amazonaws.com/nannbenda.ml/index_pic/images/MINI.png">
             </div>
             
-            
+
             <div class="main">
                     <form  class="main">
                     <div class="titleName">
-                        <img class="title_pic" src="/images/titleName.png">
+                        <img class="title_pic" src="https://s3.ap-south-1.amazonaws.com/nannbenda.ml/index_pic/images/titleName.png">
                     </div>
                         <div class=" boxes">
-                        <div class="BigBox " style="background: url(/images/lefftboxNew2.png)">
-                            <input ngf-select="pic1"  ngf-multiple="false" class="picInput" ngf-max-size="10MB" accept="image/*" ng-model="pic1">
-                            <input placeholder="Enter Name" style="color: white;" type="text" ng-model="namef" class="textInput">
+                        <div class="BigBox BigBox1 " style="background: url(https://s3.ap-south-1.amazonaws.com/nannbenda.ml/index_pic/images/lefftboxNew2.png) center center;background-size: cover;    background-size: cover;">
+                            <input onclick="hoverMe1();"  class="picInput picInput1"ng-change="downMe1();" ngf-select="pic1"  ngf-multiple="false" ngf-max-size="10MB" accept="image/*" ng-model="pic1">
+                            <input placeholder="Enter Name"  type="text" ng-model="namef" class="textInput">
                             <!-- <img  src="../images/leftbox.png"> -->
                         </div>
-                        <div class="addGrpBox ">
+                        <div class="addGrpBox " style="background: url(https://s3.ap-south-1.amazonaws.com/nannbenda.ml/index_pic/images/groupselfi.png) center center;background-size: cover;    background-size: cover;">
                             <input class="grouppic" ngf-select="$group_pic" ngf-multiple="false"  ngf-max-size="10MB" accept="image/*" ng-model="group_pic">
                         </div>
-                        <div class="BigBox " style="background: url(/images/rightboxNew2.png)">
+                        <div class="BigBox BigBox2" style="background: url(https://s3.ap-south-1.amazonaws.com/nannbenda.ml/index_pic/images/rightboxNew2.png) center center;background-size: cover;    background-size: cover;">
                             <!-- righttBoxInput -->
-                                <input class="picInput" ngf-select="pic2" ngf-multiple="false" class="" ngf-max-size="10MB" accept="image/*" ng-model="pic2">
+                                <input onclick="hoverMe2()" class="picInput picInput2"  ng-change="downMe2();" ngf-select="pic2" ngf-multiple="false" class="" ngf-max-size="10MB" accept="image/*" ng-model="pic2">
                             <!-- <img  src="/images/rightboxNew2.png"> -->
                             <input type="text" placeholder="Enter Name"  style="color: white"  ng-model="namet" class="textInput">
                         </div>
                     </div>
 
-                    <div class="messageContainer">
-                        <input ng-model="message" class="msgpic" type="text" placeholder="Your Message....">
+                    <div class="messageContainer" style=" background: url(https://s3.ap-south-1.amazonaws.com/nannbenda.ml/index_pic/images/megContainer.png) center center;background-size: cover;    background-size: cover;">
+                        <input style="background: url(https://s3.ap-south-1.amazonaws.com/nannbenda.ml/index_pic/images/msgBox.png);background-size: cover;    background-size: cover;padding: 10px 10px 10px 11px; " ng-model="message" class="msgpic" type="text" placeholder="Your Message....">
                     </div>
-                    <div class="speakContainer" ng-click="getaudio();">
+                    <div class="speakContainer" style="background: url(https://s3.ap-south-1.amazonaws.com/nannbenda.ml/index_pic/images/voice.png) center center;background-size: cover;    background-size: cover;"  ng-click="getaudio();">
                         <!-- ngf-select="audio" -->
                             <input  class="speakpic callAudio" name="audio"  ng-model="audio" accept="audio/*"capture id="recorder">
  
                     </div>
-                    <div class="submitContainer">
+                    <div class="submitContainer" style="background: url(https://s3.ap-south-1.amazonaws.com/nannbenda.ml/index_pic/images/submit1.png) center center;background-size: cover;    background-size: cover;">
                         <input type="submit" ng-click="submit();">
                     </div>
                     </form>
@@ -87,8 +83,24 @@
         </div>
 
 
-
-
     <script src="/index.js"></script>
+
+            <script>
+                function hoverMe1() {
+                   $('.picInput1').css({
+                       'box-shadow' : '0 0 10px red','opacity' : 1 
+                   }) 
+                  }
+                function hoverMe2() {
+                   $('.picInput2').css({
+                       'box-shadow' : '0 0 10px red','opacity' : 1 
+                   }) 
+                  }
+
+                $(document).ready(function () { 
+
+                 })
+
+            </script>
 </body>
 </html>

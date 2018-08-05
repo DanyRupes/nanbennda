@@ -21,7 +21,12 @@ app.use(express.static(path.join(__dirname, '../src/libs/Angular')))
 app.use(express.static(path.join(__dirname, '../src/libs/Bootstrap')))
 app.use(express.static(path.join(__dirname, '../src/libs/fonts')))
 app.use(express.static(path.join(__dirname, '../src/libs/jquery')))
+
 app.use(express.static(path.join(__dirname, '../src/styles')))
+app.use(express.static(path.join(__dirname, '../src/styles/index_styles')))
+
+
+
 app.use(express.static(path.join(__dirname, '../src/libs/ng-file-upload-bower-10.1.8')))
 
 app.use(express.static(path.join(__dirname, '../uploads/files')))

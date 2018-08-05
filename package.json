@@ -14,6 +14,7 @@
     "mediaserver": "^0.1.1",
     "mongoose": "^5.2.6",
     "multer": "^1.3.1",
-    "nginx": "0.0.0"
+    "nginx": "0.0.0",
+    "prerender": "^5.4.2"
   }
 }

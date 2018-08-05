@@ -45,6 +45,7 @@ app.controller('nbController',function ($scope,Upload, $http,$window) {
             //     var fileURL = URL.createObjectURL(blob);
             //     window.open(fileURL); 
             //   })
+            document.querySelector('.overlay').style.display = "block";
        Upload.upload({
          url : '/add',
          method : 'POST',
@@ -81,7 +82,35 @@ app.controller('nbController',function ($scope,Upload, $http,$window) {
     //     $scope.pic1 = "Added"
     //  }
 
-
+    $scope.downMe1  = function () {  
+        console.log("inside ang")
+        function downMe(){
+            console.log("in")
+            $('.picInput1').css({
+                'opacity' :0,
+                'background-color': 'beige',
+                'border': 'none',
+            })
+            $('.BigBox1').css({
+                'background' : 'url("/images/added.png") center center','background-size': 'cover','background-size':'cover'
+            })
+        }
+        downMe()
+    }
+    $scope.downMe2  = function () {  
+        console.log("inside ang")
+        function downMe2(){
+            $('.picInput2').css({
+                'opacity': 0,
+                'background-color': 'beige',
+                'border': 'none',
+            })
+            $('.BigBox2').css({
+                'background' : 'url("/images/addedto.png") center center','background-size': 'cover','background-size':'cover'
+            })
+        }
+        downMe2()
+    }
 
 
  })
