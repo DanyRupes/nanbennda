@@ -1,0 +1,149 @@
+@media screen and (min-width : 320px) and (max-width : 359px){
+    .bodyContainer .titleName {
+        width: 108%;
+        position: relative;
+        top: -17px;
+    }
+    .boxes {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 20px;
+        align-items: flex-start;
+        align-content: center;
+        /* margin-top: -50px; */
+        min-width: 45%;
+        max-height: 33%;
+        flex-wrap: nowrap;
+        /* background-color: red; */
+        position: relative;
+        top: -23px;
+        left: -10px;
+    }
+    .boxes .addGrpBox {
+        min-width: 73px;
+        min-height: 53px;
+        /* background: url(https://s3.ap-south-1.amazonaws.com/nannbenda.ml/index_pic/images/groupselfi.png); */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        /* align-self: center; */
+        position: relative;
+        top: 6px;
+        /* padding: 0px 0px 0px 71px; */
+        margin: 0px 9px;
+      }
+      .addGrpBox .grouppic {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        position: absolute;
+        top: 0px;
+        left: 0;
+       }    
+       .boxes .BigBox {
+        min-width: 28%;
+        min-height: 119px;
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+        background-position: center center !important;
+        display: flex;
+        flex-direction: column;
+       }
+       .BigBox .picInput {
+        width: 99%;
+        height: 40px;
+        position: relative;
+        /* left: 21px; */
+        opacity: 0;     
+        top: 13px;
+    }
+    .BigBox .textInput {
+        width: 101%;
+        min-height: 21px;
+        top: 24px;
+        position: relative;
+        left: 0;
+        background-color: transparent;
+        font-size: 11px;
+        padding: 0px 3px 0px 3px;
+        border: .1px solid greenyellow;
+    }
+        .messageContainer {
+            top: -30px;
+            width: 100%;
+            padding: 5px 0px 29px 0px !important;
+            height: 100px;
+            padding-bottom: 10px;
+            position: relative;
+            left: -7px;
+            display: flex;
+            flex-direction: column;
+            /* flex-grow: 1; */
+            justify-content: space-between;
+        }
+        .messageContainer .msgpic {
+            width: calc(100% - 10px) !important;
+            /* width: 100%; */
+            height: 67%;
+            /* padding-right: 100px; */
+            position: absolute;
+            /* background: url(https://s3.ap-south-1.amazonaws.com/nannbenda.ml/index_pic/images/msgBox.png); */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            left: 5px;
+            top: 34px !important;
+            line-height: 10px !important;
+            position: relative;
+            left: 0px;
+            flex: 1 auto;
+            /* line-height: 10px !important; */
+            border: none;
+            outline: none;
+            color: black;
+            text-align: center;
+        }
+        .speakContainer {
+            width: 18%;
+            height: 45px;
+            /* margin-top: 10px; */
+            position: relative;
+            /* background: url(https://s3.ap-south-1.amazonaws.com/nannbenda.ml/index_pic/images/voice.png); */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            border: none;
+            outline: none;
+            top: -17px;
+            display: flex;
+            left: -6px;
+        }
+        .speakContainer .speakpic {
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+        }
+        .submitContainer {
+            width: 160px;
+            height: 56px;
+            flex: 1 auto;
+            margin-top: 10px;
+            /* background: url(https://s3.ap-south-1.amazonaws.com/nannbenda.ml/index_pic/images/submit1.png); */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            border: none;
+            outline: none;
+            position: relative;
+            top: -12px;
+            left: -9px;
+            display: flex;
+            justify-content: center;
+        }
+        .submitContainer input {
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+        }
+}

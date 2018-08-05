@@ -1,0 +1,333 @@
+@media screen and (min-width : 444px){ 
+        .bodyContainer .titleName {
+            width: 106%;
+            position: relative;
+            top: -17px;
+        }
+        .main {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 10000;
+            position: relative;
+            left: -6px;
+        }
+        .boxes {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-bottom: 20px;
+            align-items: flex-start;
+            align-content: center;
+            /* margin-top: -50px; */
+            /* min-width: 45%; */
+            /* max-height: 33%; */
+            flex-wrap: nowrap;
+            /* background-color: red; */
+            position: relative;
+            top: -23px;
+            left: -10px;
+        }
+        .boxes .addGrpBox {
+            min-width: 79px;
+            min-height: 73px;
+            position: relative;
+            top: 6px;
+            margin: 0px 9px;
+          }
+          .addGrpBox .grouppic {
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            position: relative;
+            top: 14px;
+            left: 0;
+            height: 50px;
+           }    
+           .boxes .BigBox {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            /* flex: 1 auto; */
+            /* min-width: 28%; */
+            min-height: 160px;
+
+            height: 100%;
+           }
+            .BigBox .picInput {
+                width: 100%;
+                height: 100%;
+                position: relative;
+                opacity: 0;
+                min-height: 45px;
+                top: -6px;
+                }
+               .BigBox .textInput {
+                width: 100%;
+                top: -15px;
+                /* min-height: 27px; */
+                position: relative;
+                left: 0;
+                background-color: transparent;
+                border: 1.5px solid #fee870;
+                font-size: 14px;
+                text-align: center;
+                 }
+    
+                 .messageContainer {
+                    top: -28px;
+                    width: 100%;
+                    padding: 39px 8px 0px 0px !important;
+                    height: 100px;
+                    /* padding-bottom: 10px; */
+                    position: relative;
+                    /* left: -7px; */
+                    display: flex;
+                    flex-direction: column;
+                    /* flex-grow: 1; */
+                    justify-content: space-between;
+                }
+                .messageContainer .msgpic {
+                    width: 100%;
+                    height: 100%;
+                    /* padding-right: 100px; */
+                    position: relative;
+                    left: 20px;
+                    width: calc(100% - 49px);
+                    /* width: 100%; */
+                    /* height: 67%; */
+                    /* padding-right: 100px; */
+                    /* position: absolute; */
+                    /* left: 43px; */
+                    flex: 1 auto;
+                    /* top: 34px; */
+                    /* line-height: 10px !important; */
+                    border: none;
+                    outline: none;
+                    /* padding-left: 10px; */
+                    /* padding-right: 10px; */
+                    color: black;
+                    text-align: center;
+                }
+    
+                .speakContainer {
+                width: 16%;
+                height: 61px;
+                /* margin-top: 10px; */
+                position: relative;
+                border: none;
+                outline: none;
+                top: -17px;
+                display: flex;
+                left: -6px;
+                }
+                .speakContainer .speakpic {
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                }
+                .submitContainer {
+                width: 160px;
+                height: 56px;
+                flex: 1 auto;
+                margin-top: 10px;
+                border: none;
+                outline: none;
+                position: relative;
+                top: -12px;
+                left: -9px;
+                display: flex;
+                justify-content: center;
+                }
+                .submitContainer input {
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                }
+
+                @media  screen and (min-width : 500px) and (max-width : 599px) {
+                    .boxes .BigBox {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                        align-items: center;
+                        /* flex: 1 auto; */
+                        /* min-width: 28%; */
+                        min-height: 176px;
+                        height: 100%;
+                    }
+                    .BigBox .textInput {
+                        width: 100%;
+                        top: -13px;
+                        /* min-height: 27px; */
+                        position: relative;
+                        left: 0;
+                        background-color: transparent;
+                        border: 1.5px solid #fee870;
+                        font-size: 17px;
+                        text-align: center;
+                    }
+                    .messageContainer {
+                        top: -28px;
+                        width: 100%;
+                        padding: 39px 35px 0px 24px !important;
+                        height: 100px;
+                        /* padding-bottom: 10px; */
+                        position: relative;
+                        /* left: -7px; */
+                        display: flex;
+                        flex-direction: column;
+                        /* flex-grow: 1; */
+                        justify-content: space-between;
+                    }
+                    .messageContainer .msgpic {
+                        width: 100%;
+                        height: 100%;
+                        /* padding-right: 100px; */
+                        position: relative;
+                        left: 20px;
+                        width: calc(100% - 49px);
+                        /* width: 100%; */
+                        /* height: 67%; */
+                        /* padding-right: 100px; */
+                        /* position: absolute; */
+                        /* left: 43px; */
+                        flex: 1 auto;
+                        /* top: 34px; */
+                        /* line-height: 10px !important; */
+                        border: none;
+                        outline: none;
+                        /* padding-left: 10px; */
+                        /* padding-right: 10px; */
+                        color: black;
+                        text-align: center;
+                    }
+                }
+                
+                @media screen and (min-width : 600px) and (max-width : 1000px){
+                    .messageContainer .msgpic { 
+                        font-size: 23px !important;
+                    }
+                    .boxes .BigBox {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                        align-items: center;
+                        /* flex: 1 auto; */
+                        /* min-width: 28%; */
+                        min-height: 271px;
+                        height: 100%;
+                    
+                    }
+                    .BigBox .picInput {
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+                        opacity: 0;
+                        min-height: 45px;
+                        top: -6px;
+                    }    
+                    .BigBox .textInput {
+                        width: 100%;
+                        top: -12px;
+                        min-height: 39px;
+                        position: relative;
+                        left: 0;
+                        background-color: transparent;
+                        border: 1.5px solid #fee870;
+                        font-size: 22px;
+                        text-align: center;
+                    }
+                    .boxes .addGrpBox {
+                        min-width: 79px;
+                        min-height: 136px;
+                        position: relative;
+                        top: 6px;
+                        margin: 0px 9px;
+                    }                
+                    .messageContainer {
+                        top: -28px;
+                        width: 100%;
+                        padding: 37px 43px 9px 43px !important;
+                        /* height: 100px; */
+                        /* padding-bottom: 10px; */
+                        position: relative;
+                        /* left: -7px; */
+                        display: flex;
+                        flex-direction: column;
+                        /* flex-grow: 1; */
+                        justify-content: space-between;
+                    }
+                    .messageContainer .msgpic {    width: 100%;
+                        /* height: 100%; */
+                        /* padding-right: 100px; */
+                        position: relative;
+                        left: 20px;
+                        /* width: calc(100% - 53px); */
+                        width: 85%;
+                        /* height: 67%; */
+                        /* padding-right: 100px; */
+                        /* position: absolute; */
+                        left: 35px;
+                        flex: 1 auto;
+                        /* top: 34px; */
+                        /* line-height: 10px !important; */
+                        border: none;
+                        outline: none;
+                        /* padding-left: 10px; */
+                        /* padding-right: 10px; */
+                        color: black;
+                        text-align: center;
+                        width: 100%;
+                        height: 100%;
+                        /* padding-right: 100px; */
+                        position: relative;
+                        left: 20px;
+                        width: calc(100% - 49px);
+                        /* width: 100%; */
+                        /* height: 67%; */
+                        /* padding-right: 100px; */
+                        /* position: absolute; */
+                        /* left: 43px; */
+                        flex: 1 auto;
+                        /* top: 34px; */
+                        /* line-height: 10px !important; */
+                        border: none;
+                        outline: none;
+                        /* padding-left: 10px; */
+                        /* padding-right: 10px; */
+                        color: black;
+                        text-align: center;
+                    }
+                    .submitContainer {
+                        width: 215px;
+                        height: 77px;
+                        flex: 1 auto;
+                        margin-top: 10px;
+                        border: none;
+                        outline: none;
+                        position: relative;
+                        top: -12px;
+                        left: -9px;
+                        display: flex;
+                        justify-content: center;
+                    }
+                    .speakContainer {
+                        width: 20%;
+                        height: 114px;
+                        /* margin-top: 10px; */
+                        position: relative;
+                        border: none;
+                        outline: none;
+                        top: -17px;
+                        display: flex;
+                        left: -6px;
+                    }
+                }
+                
+
+            }
+  
